@@ -1,0 +1,60 @@
+input[type="text"]
+{
+    border: 2px solid violet;
+    background-color: rgb(61, 71, 2);
+    color:brown;
+}
+input[type="password"]
+{
+    border: 2px solid rgb(19, 219, 179);
+        background-color: rgb(178, 206, 19);
+
+}
+input::placeholder
+{
+    color:blue;
+}
+#Age::placeholder
+{
+    color: crimson;
+    border: 2px solid brown;
+    background-color: aquamarine;
+}
+input
+{
+    border-radius: 20px;;
+}
+legend
+{
+    background-color: rgb(143, 65, 1);
+    color:white ;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+
+}
+form
+{
+    text-align: center;
+    font-size: 10px;
+}
+fieldset
+{
+    border-radius: 30px;
+    background-color: beige;
+}
+fieldset:hover
+{
+    background-color: rgb(255, 149, 0);
+}
+legend:hover
+{
+    background-color:gold;
+    color: rgb(45, 4, 58);
+}
+h1
+{
+background-color: pink;
+color: black;
+}
+

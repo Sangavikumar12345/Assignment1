@@ -1,0 +1,45 @@
+h1,i{
+    background-color: rgb(70, 73, 77);
+    color: red;
+    border-radius: 20px;
+    border:2px solid gold;
+}
+form{
+    background-color: cadetblue;
+}
+label{
+    color: gold;
+}
+button{
+    color: rgb(12, 8, 5);
+    background-color: rgb(107, 2, 228);
+}
+input
+{
+    background-color: rgb(246, 248, 236);
+    font-weight: bold;
+    border-radius: 20px;
+
+
+}
+input::placeholder{
+    color:lawngreen;
+}
+legend{
+    background-color: brown;
+    color:violet;
+}
+#DOB{
+    border: 2px solid rgb(136, 6, 75);
+}
+#Name
+{
+    border: 2px solid rgb(14, 15, 14);
+}
+textarea{
+    border-radius: 20px;
+    color:palevioletred;
+}
+input[type="text"]{
+    color:turquoise;
+}

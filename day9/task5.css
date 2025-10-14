@@ -1,0 +1,26 @@
+.box1{
+    background-color: aqua;
+    color: rgb(160, 52, 12);
+    border: 10px solid black;
+     width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+}
+.box2
+{
+     background-color: coral;
+    color: rgb(255, 0, 34);
+    border: 10px solid rgba(68, 96, 164, 0.596);
+     width: 200px;
+    height: 100px;
+    box-sizing: content-box;
+}
+.box3
+{
+    background-color: blueviolet;
+    color: white;
+     width: 200px;
+    height: 200px;
+    border: 5px solid gold;
+    box-sizing: border-box;
+}

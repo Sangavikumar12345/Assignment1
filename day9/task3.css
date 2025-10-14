@@ -1,0 +1,11 @@
+.box1{
+    background-color: beige;
+    color: indigo;
+    border:10px solid palevioletred;
+    padding:20px;
+}
+.box2{
+    background-color: chocolate;
+    color: darkslateblue;
+    border:10px solid olivedrab;
+}

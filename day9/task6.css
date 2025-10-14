@@ -1,0 +1,30 @@
+.pro{
+      width: 500px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 50px;
+      margin: 100px auto;
+      border: 5px dashed #5ccd10;
+      text-align: center;
+      background-color: black;
+
+}
+h1{
+    text-align: center;
+    color:purple;
+}
+h3{
+    color:skyblue;
+}
+h5{
+    color: yellowgreen;
+}
+img{
+    border-radius: 50%;;
+}
+.pro:hover{
+    background-color:maroon;
+}
+h3>h5:hover{
+    color: rosybrown;
+}

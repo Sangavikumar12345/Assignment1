@@ -1,0 +1,53 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #333;
+  }
+
+  table.main-table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+  }
+
+  td > table {
+    width: 220px;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #fff;
+  }
+
+  /* Basic Plan */
+  <td:first-child > table {
+    border: 2px solid #3498db;
+  }
+
+  /* Pro Plan */
+  <td:nth-child(2) > table {
+    border: 4px dashed #2ecc71;
+  }
+
+  /* Premium Plan */
+  <td:nth-child(3) > table {
+    border: 6px double #e67e22;
+  }
+
+  th {
+    background-color: #eee;
+    font-size: 18px;
+    padding: 12px;
+    text-align: center;
+  }
+
+  td {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+</style>

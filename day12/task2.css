@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  max-width: 100px;
+  margin: auto;
+}
+
+.container {
+  background-color: #200000;
+  padding:10px;
+  border: 1px solid #7c2828;
+}
+
+
+.p1 {
+    background-color: crimson;
+  margin: 1px;
+  text-align: justify;
+}

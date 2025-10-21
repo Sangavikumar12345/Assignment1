@@ -1,0 +1,29 @@
+/* Make body take full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flex container to center contents */
+.center-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 50vh;           
+  background-color: #f0f0f0;
+}
+
+/* The centered box */
+.center-box {
+  background-color: #0077b6;
+  color: white;
+  padding: 60px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.p1{
+    background-color: olive;
+    color:palevioletred;
+}

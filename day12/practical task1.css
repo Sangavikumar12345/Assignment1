@@ -1,0 +1,62 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e3f2fd;
+  padding: 20px;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 30px;
+}
+
+/* Flex container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Weather box styling */
+.box {
+  background-color: #6a7b8b;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(33.333% - 20px); /* 3 columns layout */
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+.box:hover {
+  
+  background-color: #7ea3cd;
+}
+
+/* Box headings */
+.box h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraph text */
+.box p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+
+

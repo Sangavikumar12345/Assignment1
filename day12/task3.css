@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #faf8fa;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #082301;
+  color: rgb(234, 255, 0);
+  padding:30px;
+  text-align: center;
+    flex: 500 500 1000%;
+  box-shadow: 0 4px 6px rgba(19, 220, 150, 0.1);
+  min-width: 200px;
+  border-radius: 8px;
+}

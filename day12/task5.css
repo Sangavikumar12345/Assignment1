@@ -1,0 +1,20 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr; /* 2 columns */
+  grid-template-rows: 2fr 2fr;    /* 2 rows */
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background-color: #6400b6;
+  color: white;
+  padding: 40px;
+  font-size: 1.5em;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

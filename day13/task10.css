@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: #fff;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero {
+  position: relative;
+  height: 100vh;  /* Full viewport height */
+  width: 100vw;   /* Full viewport width */
+  background: radial-gradient(circle at bottom, #0f2027, #203a43, #2c5364);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Stars Background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 200vh;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: twinkle 20s linear infinite alternate;
+  opacity: 0.3;
+}
+
+@keyframes twinkle {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-10vw, -10vh); }
+}
+
+/* Glowing Planet */
+.planet {
+  position: absolute;
+  bottom: -10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle at 30% 30%, #00ffe0, #004d4d, #001f1f);
+  border-radius: 50%;
+  box-shadow: 0 0 60px 20px rgba(0, 255, 255, 0.4);
+  animation: floatPlanet 10s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes floatPlanet {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-2vh); }
+}
+
+/* Hero Text */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 5vw;
+}
+
+.hero-content h1 {
+  font-size: 6vw; /* scales with viewport width */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+}
+
+.hero-content span {
+  color: #00ffe0;
+}
+
+.hero-content p {
+  margin-top: 2vh;
+  font-size: 2.2vw;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 5vh;
+  padding: 1.2vh 4vw;
+  background: linear-gradient(90deg, #020e67, #00bcd4);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 1.5vw;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #02064f, #00ffe0);
+}
+
+/* ==========================
+   RESPONSIVENESS
+========================== */
+
+@media (max-width: 800px) {
+  .hero-content h1 {
+    font-size: 9vw;
+  }
+
+  .hero-content p {
+    font-size: 3vw;
+  }
+
+  .btn {
+    font-size: 3vw;
+  }
+
+  .planet {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-content h1 {
+    font-size: 10vw;
+  }
+
+  .hero-content p {
+    font-size: 4vw;
+  }
+
+  .btn {
+    font-size: 4vw;
+    padding: 1.5vh 5vw;
+  }
+
+  .planet {
+    width: 70vw;
+    height: 70vw;
+  }
+}

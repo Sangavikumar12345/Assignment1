@@ -1,0 +1,67 @@
+/* Root font size for rem */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #860076;
+  padding: 2rem;
+}
+
+
+.blog-card {
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  margin: auto;
+  background: rgb(236, 8, 8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.content-rem {
+  flex: 2;
+  padding: 2rem;
+  background-color: #61585891;
+}
+
+.content-rem h1 {
+  font-size: 2rem; 
+  margin-bottom: 1rem;
+}
+
+.content-rem p {
+  font-size: 1rem; 
+  line-height: 1.6;
+}
+
+
+.meta-em {
+  flex: 1;
+  background-color: #fcfdff;
+  padding: 1em;
+  font-size: 0.875rem; 
+}
+
+.meta-group {
+  margin-bottom: 1.5em;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1em; 
+}
+
+.value {
+  display: block;
+  font-size: 1.2em;
+  color: #0d0101;
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    flex-direction: column;
+  }
+}

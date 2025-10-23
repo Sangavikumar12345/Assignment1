@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Ribbon Navbar</title>
+  <link rel="stylesheet" href="./task8.css">
+</head>
+<body>
+
+  <nav class="ribbon-nav">
+    <div class="nav-brand">✨ My page</div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1>Welcome to my page</h1>
+      <p>Experience a glowing interface that adapts to your screen.</p>
+    </section>
+  </main>
+
+  <script>
+    // Toggle menu for small screens
+    const toggle = document.getElementById("navToggle");
+    const links = document.getElementById("navLinks");
+
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("active");
+      toggle.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>

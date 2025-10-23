@@ -1,0 +1,120 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1a1a2e, #16213e);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  color: #00f5ff;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+/* Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+}
+
+/* Product Card */
+.product-card {
+  perspective: 800px;
+}
+
+.product-inner {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transform: rotateY(10deg) rotateX(5deg);
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.product-inner:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+}
+
+.product-inner img {
+  width: 100%;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.product-inner:hover img {
+  transform: scale(1.05);
+}
+
+.product-inner h3 {
+  color: #00f5ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-inner p {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* 2 columns for tablets */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .product-inner {
+    transform: none;
+  }
+}
+
+/* 1 column for mobile */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .product-inner {
+    padding: 1rem;
+    transform: none;
+  }
+}

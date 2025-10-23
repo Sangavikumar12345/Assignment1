@@ -1,0 +1,122 @@
+/* ------------------------------
+   Base and Variables
+------------------------------ */
+
+html {
+  font-size: 16px; /* Base for rem units */
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #098ac2, #022632, #2c5364);
+  color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   Hero Section
+------------------------------ */
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* scales with root */
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: #ff8000;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* ------------------------------
+   Content Section
+------------------------------ */
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+article {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2em; /* relative to parent font size */
+  border-radius: 1em;
+  margin-bottom: 2em;
+  border-left: 0.5em solid #00ffe0;
+}
+
+h2 {
+  font-size: 1.6em; /* relative to parent */
+  margin-bottom: 0.5em;
+  color: #00ffe0;
+}
+
+p {
+  font-size: 1em; /* base size, scales with root */
+  color: #ddd;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  color: #ffeb3b;
+  font-size: 0.9em;
+}
+
+/* ------------------------------
+   Quote Section
+------------------------------ */
+
+.quote blockquote {
+  font-size: 1.4em;
+  font-style: italic;
+  text-align: center;
+  color: #00ffe0;
+  padding: 2em 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+  text-align: center;
+  padding: 2em;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ------------------------------
+   Responsive Adjustment
+------------------------------ */
+
+@media (max-width: 800px) {
+  html {
+    font-size: 15px; /* Slightly smaller base */
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 14px; /* Everything scales down proportionally */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

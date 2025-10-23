@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navbar Base */
+.ribbon-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #00bcd4, #8e2de2, #4a00e0);
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  padding: 1rem 2rem;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Logo / Brand */
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.4s ease;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Toggle Button (mobile) */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Animation for Gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Responsive Design ===== */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 40, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    color: #00eaff;
+  }
+
+  /* Toggle Button Animation */
+  .nav-toggle.open {
+    transform: rotate(90deg);
+    transition: 0.3s ease;
+  }
+}
+
+/* Main Section */
+main {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00eaff;
+}
+
+main p {
+  font-size: 1rem;
+  color: #ccc;
+}

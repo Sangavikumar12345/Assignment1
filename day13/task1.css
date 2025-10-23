@@ -1,0 +1,69 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  transition: background 1s ease;
+  background: linear-gradient(135deg, #054938, #f2ff00); 
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+@media (min-width: 600px) {
+  body {
+    background: linear-gradient(135deg, #ff8c00, #ffd700);
+  }
+}
+
+/* Large screen: 900px+ with a starry animation */
+@media (min-width: 900px) {
+  body {
+    background: radial-gradient(ellipse at center, #8d19bb, #000000);
+    animation: stars 10s linear infinite;
+    background-size: cover;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.2;
+    z-index: -1;
+    animation: twinkle 4s infinite alternate;
+  }
+}
+
+/* Optional: subtle star twinkle effect */
+@keyframes twinkle {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+/* For completeness: background "motion" on large screens */
+@keyframes stars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 1000px;
+  }
+}

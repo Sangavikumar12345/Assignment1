@@ -1,0 +1,157 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(90deg, #00bcd4, #8bc34a);
+  color: #121212;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+/* Split Layout */
+.split-container {
+  display: flex;
+  height: 100%;
+  min-height: 80vh;
+}
+
+section {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.developer {
+  background: #0a0a0a;
+  border-right: 2px solid #00bcd4;
+}
+
+.designer {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* Headings & Text */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: center;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Project Cards */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.project-card {
+  padding: 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.developer .project-card {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.designer .project-card {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .split-container {
+    flex-direction: column;
+  }
+
+  .developer,
+  .designer {
+    border-right: none;
+    border-bottom: 2px solid #00bcd4;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+}
+
+ 

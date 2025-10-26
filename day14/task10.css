@@ -1,0 +1,60 @@
+.card {
+  perspective: 1000px;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.layer-bg {
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  z-index: 1;
+}
+
+.layer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.layer-content {
+  z-index: 3;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* On hover, tilt card and move layers for parallax */
+.card:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+.card:hover .layer-bg {
+  transform: translateZ(-20px);
+}
+
+.card:hover .layer-img {
+  transform: translateZ(10px);
+}
+
+.card:hover .layer-content {
+  transform: translateZ(20px);
+}

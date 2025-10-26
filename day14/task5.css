@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  margin: 0;
+}
+
+.smooth-btn {
+  background-color: #012137;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Hover effect */
+.smooth-btn:hover {
+  background-color: #2b0448;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus effect (keyboard focus) */
+.smooth-btn:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  background-color: #3cb0fd;
+  transform: scale(1.05);
+}

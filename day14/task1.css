@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+  margin: 0;
+}
+
+.color-box {
+  width: 200px;
+  height: 200px;
+  background-color: #34b7db;
+  border-radius: 10px;
+  transition: background-color 0.8s ease, transform 0.3s ease;
+}
+
+.color-box:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+}

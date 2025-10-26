@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  margin: 0;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #333;           /* Base border */
+  border-top: 8px solid #06a546;    /* Colored part */
+  border-radius: 50%;               /* Makes it circular */
+  animation: spin 1s linear infinite;
+}
+
+/* Rotation animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

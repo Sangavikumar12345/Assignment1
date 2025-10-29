@@ -1,5 +1,5 @@
 // Example 1: Basic concatenation
-let age = 25;
+let age = 20;
 let message = "Age: " + age;
 console.log(message); // Output: "Age: 20"
 

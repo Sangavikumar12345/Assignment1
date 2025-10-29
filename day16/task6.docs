@@ -1,0 +1,56 @@
+---> JavaScript is a lightweight, interpreted (or just-in-time compiled) programming language. 
+
+
+---> It is multi-paradigm: supporting imperative, object-oriented and functional programming styles. 
+
+---> JavaScript uses dynamic typing, meaning variables don’t require explicit types and can change types at runtime. 
+
+
+---> It is platform independent—JavaScript code can run in many environments (browsers, servers, desktops) without needing recompilation. 
+
+
+---> It supports first-class functions: functions can be assigned to variables, passed as arguments, returned from other functions. 
+
+
+---> JavaScript features closure: functions remember the environment in which they were created (lexical scope) even when executed later. 
+
+
+---> The language uses prototype-based inheritance rather than classical class‐based inheritance (though ES6 introduced class syntax). 
+
+
+---> Since ES6 (ECMAScript 2015) JavaScript has formal class syntax, modules (import/export), arrow functions, let and const, template literals, destructuring, etc. 
+
+
+---> JavaScript supports asynchronous programming via callbacks, promises, and async/await. 
+
+
+---> It is case-sensitive (variable names, function names distinguish upper/lower case). 
+
+
+---> JavaScript is event-driven — especially in the browser environment, it can react to user actions like clicks, keypresses, form submissions. 
+
+
+---> It offers built-in support for JSON (JavaScript Object Notation), which is widely used for data interchange between client and server. 
+TestingDocs
+
+---> JavaScript supports modules, enabling code organization and reusability by splitting into files and using import/export. 
+
+---> With the arrival of Node.js, JavaScript moved from browser-only to server-side and full-stack development. 
+
+
+---> JavaScript has built-in standard objects (Array, Object, Map, Set, WeakMap, etc) and supports new data structures like BigInt, Symbol. 
+MDN Web Docs
+
+---> The ECMAScript standard is updated annually, with new features like optional chaining, nullish coalescing, private class fields, iterator helpers. 
+WaspDev Blog
+
+
+---> JavaScript is highly portable and supported across all modern web browsers via built-in JavaScript engines (e.g., V8 engine in Chrome). 
+
+---> It allows dynamic object construction and introspection (objects can be built/modified at runtime, properties may be added or deleted). 
+MDN Web Docs
+
+---> JavaScript supports asynchronous, non-blocking I/O (especially in server environments) enabling scalable real-time applications. 
+
+
+--->JavaScript’s ecosystem is vast: countless frameworks, libraries, tools, transpilers (e.g., Babel) support modern development; it remains central to web, mobile & desktop app development. 

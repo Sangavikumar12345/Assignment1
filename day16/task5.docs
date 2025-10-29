@@ -1,0 +1,47 @@
+1995 – Creation
+
+---J>avaScript was created by Brendan Eich at Netscape in just 10 days.
+
+--->Initially called Mocha, later renamed LiveScript, and finally JavaScript.
+
+1997 – Standardization (ES1)
+
+--->JavaScript was standardized by Ecma International as ECMAScript 1 (ES1).
+
+--->This made it easier for all browsers to support a common version.
+
+1999 – ES3 Released
+
+--->Added features like regular expressions, exception handling, and better string manipulation.
+
+--->Became the foundation for modern JavaScript.
+
+2005–2006 – AJAX and Web 2.0
+
+--->JavaScript enabled dynamic websites through AJAX.
+
+--->Frameworks like jQuery simplified DOM manipulation and cross-browser issues.
+
+2009 – ES5 and Node.js
+
+--->ES5 added strict mode, JSON support, and new array methods.
+
+--->Node.js was introduced, allowing JavaScript to run on servers.
+
+2015 – ES6 (ECMAScript 2015)
+
+--->Major upgrade introducing let, const, arrow functions, classes, modules, and promises.
+
+--->Marked the start of modern JavaScript development.
+
+2016–Present – Annual Updates
+
+--->ECMAScript versions are now released every year (ES7, ES8, …).
+
+--->Added features like async/await, optional chaining, and nullish coalescing.
+
+
+
+---J>avaScript is used for frontend, backend, mobile, and desktop apps.
+
+--->Frameworks like React, Vue, Angular, and tools like Node.js and Electron make it one of the most powerful programming ecosystems.

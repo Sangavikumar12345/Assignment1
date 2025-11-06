@@ -1,0 +1,10 @@
+let colors = ["red", "blue", "green"];
+console.log("Original array:", colors);
+colors.push("yellow");
+console.log("After push:", colors);
+colors.pop();
+console.log("After pop:", colors);
+colors.unshift("purple");
+console.log("After unshift:", colors);
+colors.shift();
+console.log("After shift:", colors);

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product List</title>
+</head>
+<body>
+  <h2>Product Names:</h2>
+  <ul id="productList"></ul>
+
+  <script>
+    // Create an array of products (objects with name and price)
+    const products = [
+      { name: "Laptop", price: 800 },
+      { name: "Phone", price: 500 },
+      { name: "Tablet", price: 300 },
+      { name: "Headphones", price: 100 },
+    ];
+
+    const productlist = document.getElementById("productList");
+    products.forEach(product => {
+      const li = document.createElement("li");
+      li.textContent = product.name; 
+      productlist.appendChild(li);
+    });
+  </script>
+</body>
+</html>

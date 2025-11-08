@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function checkNumber(num) {
+  if (num < 0) {
+    throw new Error("Negative numbers are not allowed!");
+  }
+  return "Valid number: " + num;
+}
+
+try {
+  console.log(checkNumber(-5));
+} catch (err) {
+  console.error(err.message);
+}
+</script>
+
+</body>
+</html>

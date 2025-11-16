@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Student Averages</title>
+</head>
+<body>
+
+<h2>Student Averages</h2>
+<ul id="output"></ul>
+
+<script>
+  // Student data
+  const students = [
+    { name: "sangu", grades: [90, 80, 70] },
+    { name: "sangavi", grades: [60, 50, 40] }
+  ];
+
+  // Function to calculate average
+  function average(grades) {
+    return grades.reduce((sum, n) => sum + n, 0) / grades.length;
+  }
+
+  // Function to display averages
+  function showAverages(list) {
+    const output = document.getElementById("output");
+    list.forEach(student => {
+      const li = document.createElement("li");
+      li.textContent = `${student.name}'s average: ${average(student.grades)}`;
+      output.appendChild(li);
+    });
+  }
+
+  // Run
+  showAverages(students);
+</script>
+
+</body>
+</html>

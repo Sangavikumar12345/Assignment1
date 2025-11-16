@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Session Storage Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    button { padding: 5px 10px; font-size: 16px; margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h2>Session Storage Example</h2>
+
+<button id="storeBtn">Store Current Session Time</button>
+
+<p id="sessionInfo">No session time stored yet.</p>
+
+<script>
+  const storeBtn = document.getElementById("storeBtn");
+  const sessionInfo = document.getElementById("sessionInfo");
+
+  // Display stored session time on page load
+  window.addEventListener("load", () => {
+    const storedTime = sessionStorage.getItem("sessionTime");
+    if (storedTime) {
+      sessionInfo.textContent = `Last session time: ${storedTime}`;
+    }
+  });
+
+  // Store current time in sessionStorage
+  storeBtn.addEventListener("click", () => {
+    const currentTime = new Date().toLocaleString();
+    sessionStorage.setItem("sessionTime", currentTime);
+    sessionInfo.textContent = `Current session time stored: ${currentTime}`;
+  });
+</script>
+
+</body>
+</html>

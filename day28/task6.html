@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Location</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px 15px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+<h2>Get Your Current Location</h2>
+<button id="getLocationBtn">Show My Location</button>
+
+<p id="location">Location will appear here.</p>
+
+<script>
+  const button = document.getElementById("getLocationBtn");
+  const locationDisplay = document.getElementById("location");
+
+  button.addEventListener("click", () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          locationDisplay.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
+        },
+        (error) => {
+          locationDisplay.textContent = `Error: ${error.message}`;
+        }
+      );
+    } else {
+      locationDisplay.textContent = "Geolocation is not supported by your browser.";
+    }
+  });
+</script>
+
+</body>
+</html>

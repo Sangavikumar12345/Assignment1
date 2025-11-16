@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Console Example</title>
+</head>
+<body>
+
+<h2>Check the browser console</h2>
+
+<script>
+  // Sample data
+  const students = [
+    { name: "vijaya", age: 22 },
+    { name: "bharathi", age: 24 },
+    { name: "sangavi", age: 21 }
+  ];
+
+  // Log the array normally
+  console.log("Students array:", students);
+
+  // Log the array as a table
+  console.table(students);
+
+  // Simple loop with console.log (set a breakpoint here if you want)
+  for (let i = 0; i < students.length; i++) {
+    console.log("Student:", students[i].name, "Age:", students[i].age);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Location Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px 15px; font-size: 16px; margin: 5px; }
+  </style>
+</head>
+<body>
+
+<h2>Get and Save Your Location</h2>
+
+<button id="getLocationBtn">Show My Location</button>
+<button id="saveLocationBtn">Save Location</button>
+
+<p id="location">Location will appear here.</p>
+<p id="savedLocation">Saved location: None</p>
+
+<script>
+  const getLocationBtn = document.getElementById("getLocationBtn");
+  const saveLocationBtn = document.getElementById("saveLocationBtn");
+  const locationDisplay = document.getElementById("location");
+  const savedDisplay = document.getElementById("savedLocation");
+
+  let currentLocation = null;
+
+  // Display saved location on page load
+  window.addEventListener("load", () => {
+    const saved = localStorage.getItem("userLocation");
+    if (saved) {
+      const loc = JSON.parse(saved);
+      savedDisplay.textContent = `Saved location: Latitude ${loc.lat}, Longitude ${loc.lon}`;
+    }
+  });
+
+  // Get current location
+  getLocationBtn.addEventListener("click", () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          currentLocation = { lat, lon };
+          locationDisplay.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
+        },
+        (error) => {
+          locationDisplay.textContent = `Error: ${error.message}`;
+        }
+      );
+    } else {
+      locationDisplay.textContent = "Geolocation is not supported by your browser.";
+    }
+  });
+
+  // Save current location to localStorage
+  saveLocationBtn.addEventListener("click", () => {
+    if (currentLocation) {
+      localStorage.setItem("userLocation", JSON.stringify(currentLocation));
+      savedDisplay.textContent = `Saved location: Latitude ${currentLocation.lat}, Longitude ${currentLocation.lon}`;
+      alert("Location saved!");
+    } else {
+      alert("Please get your location first.");
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Object to localStorage</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    button { padding: 5px 10px; font-size: 16px; margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h2>Save Object to localStorage</h2>
+
+<button id="saveBtn">Save Object</button>
+<p id="status">No data saved yet.</p>
+
+<script>
+  const saveBtn = document.getElementById("saveBtn");
+  const status = document.getElementById("status");
+
+  // Example object
+  const user = {
+    name: "Alice",
+    age: 22,
+    course: "Web Development"
+  };
+
+  saveBtn.addEventListener("click", () => {
+    // Convert object to JSON
+    const jsonData = JSON.stringify(user);
+
+    // Save to localStorage
+    localStorage.setItem("userData", jsonData);
+
+    status.textContent = "User data saved to localStorage!";
+    console.log("Saved data:", jsonData);
+  });
+</script>
+
+</body>
+</html>

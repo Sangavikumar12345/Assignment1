@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debug This Code Quiz</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    textarea { width: 100%; height: 120px; font-family: monospace; font-size: 14px; }
+    button { padding: 8px 15px; font-size: 16px; margin-top: 10px; }
+    #feedback { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h2>Debug This Code Quiz</h2>
+<p>Fix the JavaScript code below so it logs numbers from 1 to 5:</p>
+
+<textarea id="buggyCode">
+// Buggy code:
+for (let i = 1; i <= 5; i--) {
+  console.log(i);
+}
+</textarea>
+
+<button id="checkBtn">Run & Check</button>
+
+<p id="feedback"></p>
+
+<script>
+  const checkBtn = document.getElementById("checkBtn");
+  const feedback = document.getElementById("feedback");
+  const buggyCode = document.getElementById("buggyCode");
+
+  checkBtn.addEventListener("click", () => {
+    const userCode = buggyCode.value;
+
+    try {
+      // Use Function constructor to safely run user code
+      const func = new Function(userCode);
+      console.clear();
+      func(); // Run the code in console
+      feedback.textContent = "Check the console to see the output.";
+      feedback.style.color = "green";
+    } catch (err) {
+      feedback.textContent = "Error: " + err.message;
+      feedback.style.color = "red";
+    }
+  });
+</script>
+
+</body>
+</html>

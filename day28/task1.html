@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LocalStorage Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    input, button { padding: 5px; font-size: 16px; margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h2>Store Your Info</h2>
+
+<label>
+  Name: <input type="text" id="name">
+</label><br>
+<label>
+  Course: <input type="text" id="course">
+</label><br>
+<button id="saveBtn">Save Info</button>
+
+<h3>Stored Info:</h3>
+<p id="storedInfo">Nothing stored yet.</p>
+
+<script>
+  const nameInput = document.getElementById("name");
+  const courseInput = document.getElementById("course");
+  const saveBtn = document.getElementById("saveBtn");
+  const storedInfo = document.getElementById("storedInfo");
+
+  // Retrieve stored data on page load
+  window.addEventListener("load", () => {
+    const storedName = localStorage.getItem("name");
+    const storedCourse = localStorage.getItem("course");
+
+    if (storedName && storedCourse) {
+      storedInfo.textContent = `Name: ${storedName}, Course: ${storedCourse}`;
+    }
+  });
+
+  // Save data to localStorage
+  saveBtn.addEventListener("click", () => {
+    const name = nameInput.value.trim();
+    const course = courseInput.value.trim();
+
+    if (!name || !course) {
+      alert("Please enter both name and course.");
+      return;
+    }
+
+    localStorage.setItem("name", name);
+    localStorage.setItem("course", course);
+    storedInfo.textContent = `Name: ${name}, Course: ${course}`;
+    
+    // Clear inputs
+    nameInput.value = "";
+    courseInput.value = "";
+  });
+</script>
+
+</body>
+</html>

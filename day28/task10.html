@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Time Logger</title>
+</head>
+<body>
+
+<h2>Current Time Logger</h2>
+<button id="logTimeBtn">Log Current Time</button>
+<p id="timeDisplay">Time will appear here.</p>
+
+<script>
+  const button = document.getElementById("logTimeBtn");
+  const display = document.getElementById("timeDisplay");
+
+  button.addEventListener("click", () => {
+    const now = new Date(); // Get current time
+    const timeString = now.toLocaleTimeString(); // Format as HH:MM:SS
+
+    console.log("Current Time:", timeString); // Log in console
+    sessionStorage.setItem("currentTime", timeString); // Save in sessionStorage
+
+    display.textContent = `Current Time: ${timeString}`;
+  });
+
+  // Optionally display previously saved time on page reload
+  const savedTime = sessionStorage.getItem("currentTime");
+  if (savedTime) {
+    display.textContent = `Previous Session Time: ${savedTime}`;
+  }
+</script>
+
+</body>
+</html>

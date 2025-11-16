@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>localStorage JSON Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    button { padding: 5px 10px; font-size: 16px; margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h2>Save and Read Object in localStorage</h2>
+
+<button id="saveBtn">Save Object</button>
+<button id="readBtn">Read Object</button>
+
+<p id="output">No data yet.</p>
+
+<script>
+  const saveBtn = document.getElementById("saveBtn");
+  const readBtn = document.getElementById("readBtn");
+  const output = document.getElementById("output");
+
+  // Example object
+  const user = {
+    name: "sangavi k",
+    age: 22,
+    course: "Information technology"
+  };
+
+  // Save object to localStorage
+  saveBtn.addEventListener("click", () => {
+    const jsonData = JSON.stringify(user);
+    localStorage.setItem("userData", jsonData);
+    output.textContent = "User data saved to localStorage!";
+    console.log("Saved JSON:", jsonData);
+  });
+
+  // Read object from localStorage
+  readBtn.addEventListener("click", () => {
+    const storedData = localStorage.getItem("userData");
+    if (storedData) {
+      const parsedData = JSON.parse(storedData); // Convert JSON back to object
+      console.log("Parsed Object:", parsedData);
+      output.textContent = `Name: ${parsedData.name}, Age: ${parsedData.age}, Course: ${parsedData.course}`;
+    } else {
+      output.textContent = "No data found in localStorage.";
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try Catch Example</title>
+</head>
+<body>
+
+<h2>Try...Catch Example</h2>
+
+<button onclick="causeError()">Cause Error</button>
+
+<p id="log"></p>
+
+<script>
+  function causeError() {
+    const log = document.getElementById("log");
+
+    try {
+      // This will cause a ReferenceError
+      console.log(nonExistentVariable);
+    } catch (error) {
+      log.innerHTML = `<strong>Error Name:</strong> ${error.name} <br>
+                       <strong>Error Message:</strong> ${error.message}`;
+      console.log("Error Name:", error.name);
+      console.log("Error Message:", error.message);
+    }
+  }
+</script>
+
+</body>
+</html>

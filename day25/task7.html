@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+<h2>User Form</h2>
+
+<form id="userForm">
+  <input type="text" id="name" placeholder="Enter your name"><br><br>
+  <input type="email" id="email" placeholder="Enter your email"><br><br>
+  <input type="number" id="age" placeholder="Enter your age"><br><br>
+  <button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  function validateForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const age = document.getElementById("age").value;
+    const msg = document.getElementById("message");
+
+    try {
+      if (!name || name.trim() === "") {
+        throw new Error("Name is required.");
+      }
+
+      if (!email || email.trim() === "") {
+        throw new Error("Email is required.");
+      }
+
+      if (!age || age.trim() === "") {
+        throw new Error("Age is required.");
+      }
+
+      msg.textContent = "Form submitted successfully!";
+      msg.style.color = "green";
+
+    } catch (e) {
+      msg.textContent = e.message;
+      msg.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>

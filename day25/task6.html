@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Division Check</title>
+</head>
+<body>
+
+<h2>Divide Two Numbers</h2>
+
+<input id="num1" type="number" placeholder="Enter first number"><br><br>
+<input id="num2" type="number" placeholder="Enter second number"><br><br>
+<button onclick="performDivision()">Divide</button>
+
+<p id="message"></p>
+
+<script>
+  function divide(a, b) {
+    if (b === 0) {
+      throw new Error("Cannot divide by zero.");
+    }
+    return a / b;
+  }
+
+  function performDivision() {
+    const a = Number(document.getElementById("num1").value);
+    const b = Number(document.getElementById("num2").value);
+    const msg = document.getElementById("message");
+
+    try {
+      const result = divide(a, b);
+      msg.textContent = "Result: " + result;
+      msg.style.color = "green";
+    } catch (e) {
+      msg.textContent = e.message;
+      msg.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>

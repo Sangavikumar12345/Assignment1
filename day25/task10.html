@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combined Validation Example</title>
+</head>
+<body>
+
+<h2>User Form Validation</h2>
+
+<form id="userForm">
+  <input type="text" id="name" placeholder="Enter your name"><br><br>
+  <input type="email" id="email" placeholder="Enter your email"><br><br>
+  <input type="number" id="age" placeholder="Enter your age"><br><br>
+  <button type="button" onclick="validateForm()">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  function validateForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const age = Number(document.getElementById("age").value);
+    const msg = document.getElementById("message");
+
+    try {
+      // Name validation
+      if (!name || name.trim() === "") {
+        throw new Error("Invalid name: Name cannot be empty.");
+      }
+
+      // Email validation
+      if (!email || !email.includes("@")) {
+        throw new Error("Invalid email: Must include '@'.");
+      }
+
+      // Age validation
+      if (isNaN(age) || age <= 0) {
+        throw new Error("Invalid age: Must be a positive number.");
+      }
+
+      if (age < 18) {
+        throw new Error("You must be at least 18 years old.");
+      }
+
+      msg.textContent = "All inputs are valid!";
+      msg.style.color = "green";
+
+    } catch (error) {
+      msg.textContent = `${error.name}: ${error.message}`;
+      msg.style.color = "red";
+
+    } finally {
+      console.log("Validation attempt finished.");
+    }
+  }
+</script>
+
+</body>
+</html>

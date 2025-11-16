@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Check</title>
+</head>
+<body>
+
+<h2>Age Verification</h2>
+
+<input type="number" id="age" placeholder="Enter your age"><br><br>
+<button onclick="checkAge()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+  function ageCheck(age) {
+    if (age < 18) {
+      throw new Error("You must be at least 18 years old.");
+    }
+    return "Age verified. Access granted!";
+  }
+
+  function checkAge() {
+    const age = Number(document.getElementById("age").value);
+    const msg = document.getElementById("message");
+
+    try {
+      const result = ageCheck(age);
+      msg.textContent = result;
+      msg.style.color = "green";
+    } catch (e) {
+      msg.textContent = e.message;
+      msg.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>

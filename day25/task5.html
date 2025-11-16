@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Check</title>
+</head>
+<body>
+
+<h2>Enter a Number</h2>
+
+<input id="num" type="number" placeholder="Enter a number"><br><br>
+<button onclick="checkNumber()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+  function checkNumber() {
+    const num = Number(document.getElementById("num").value);
+    const msg = document.getElementById("message");
+
+    try {
+      if (num > 100) {
+        throw new Error("Number cannot be greater than 100.");
+      }
+
+      msg.textContent = "Number is valid!";
+      msg.style.color = "green";
+
+    } catch (e) {
+      msg.textContent = e.message;
+      msg.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>

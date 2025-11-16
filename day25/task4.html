@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validation Example</title>
+</head>
+<body>
+
+  <h2>User Validation</h2>
+
+  <input id="name" type="text" placeholder="Enter name"><br><br>
+  <input id="email" type="text" placeholder="Enter email"><br><br>
+
+  <button onclick="validateUser()">Submit</button>
+
+  <p id="message"></p>
+
+  <script>
+    function validateUser() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const msg = document.getElementById("message");
+
+      try {
+        if (!name || name.trim() === "") {
+          throw new Error("Invalid name: Name cannot be empty.");
+        }
+
+        if (!email || !email.includes("@")) {
+          throw new Error("Invalid email: Email must contain '@'.");
+        }
+
+        msg.textContent = "User is valid!";
+        msg.style.color = "green";
+
+      } catch (e) {
+        msg.textContent = e.message;
+        msg.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

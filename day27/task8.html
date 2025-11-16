@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Followers Fetcher</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    input, button { padding: 5px; font-size: 16px; margin: 5px 0; }
+    li { margin-bottom: 5px; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+
+<h2>GitHub Followers</h2>
+
+<input type="text" id="username" placeholder="Enter GitHub username">
+<button id="fetchBtn">Fetch Followers</button>
+
+<ul id="followers"></ul>
+
+<script>
+  const fetchBtn = document.getElementById("fetchBtn");
+  const usernameInput = document.getElementById("username");
+  const followersEl = document.getElementById("followers");
+
+  fetchBtn.addEventListener("click", async () => {
+    const username = usernameInput.value.trim();
+    followersEl.innerHTML = ""; // Clear previous results
+
+    if (!username) {
+      followersEl.innerHTML = "<li class='error'>Please enter a username.</li>";
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}/followers`);
+      if (!response.ok) {
+        throw new Error(`User not found or fetch failed! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.length === 0) {
+        followersEl.innerHTML = "<li>No followers found.</li>";
+        return;
+      }
+
+      data.forEach(follower => {
+        const li = document.createElement("li");
+        li.textContent = follower.login;
+        followersEl.appendChild(li);
+      });
+    } catch (error) {
+      followersEl.innerHTML = `<li class='error'>Error: ${error.message}</li>`;
+    }
+  });
+</script>
+
+</body>
+</html>

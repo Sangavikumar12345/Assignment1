@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Profile</title>
+</head>
+<body>
+
+<h2>GitHub Profile Info</h2>
+<p id="profile"></p>
+
+<script>
+  const username = "<your-username>"; // replace with your GitHub username
+  const profileEl = document.getElementById("profile");
+
+  fetch("https://github.com/Sangavikumar12345/Assignment1.git")
+    .then(res => res.json())
+    .then(data => {
+      profileEl.innerHTML = `Login: ${data.login} <br> Public Repos: ${data.public_repos}`;
+    })
+    .catch(err => {
+      profileEl.textContent = "Error fetching data";
+    });
+</script>
+
+</body>
+</html>

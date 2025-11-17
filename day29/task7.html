@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<img id="pic" src="https://via.placeholder.com/300x200?text=Image+1" width="300">
+
+<br><br>
+
+<button id="prev">Prev</button>
+<button id="next">Next</button>
+
+<script>
+    let images = [
+        "https://via.placeholder.com/300x200?text=Image+1",
+        "https://via.placeholder.com/300x200?text=Image+2",
+        "https://via.placeholder.com/300x200?text=Image+3"
+    ];
+
+    let i = 0;
+
+    function show(n) {
+        $("#pic").fadeOut(function () {
+            $(this).attr("src", images[n]).fadeIn();
+        });
+    }
+
+    $("#next").click(function () {
+        i = (i + 1) % images.length;
+        show(i);
+    });
+
+    $("#prev").click(function () {
+        i = (i - 1 + images.length) % images.length;
+        show(i);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .answer {
+            display: none;
+            margin-top: 5px;
+            color: green;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Simple Quiz</h1>
+
+<div class="question">
+    <p>1. What is the capital of France?</p>
+    <button class="show-answer">Show Answer</button>
+    <div class="answer">Paris</div>
+</div>
+
+<div class="question">
+    <p>2. What is 5 + 7?</p>
+    <button class="show-answer">Show Answer</button>
+    <div class="answer">12</div>
+</div>
+
+<script>
+    $(".show-answer").click(function () {
+        let answer = $(this).next(".answer");
+        if (answer.is(":visible")) {
+            answer.hide();
+            $(this).text("Show Answer");
+        } else {
+            answer.show();
+            $(this).text("Hide Answer");
+        }
+    });
+</script>
+
+</body>
+</html>

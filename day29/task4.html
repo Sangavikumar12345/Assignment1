@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Text and Color</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<p id="message">Original text</p>
+<button id="changeBtn">Change Text & Color</button>
+
+<script>
+    $(document).ready(function () {
+        $("#changeBtn").click(function () {
+            $("#message")
+                .text("The text has been changed!")
+                .css("color", "blue");  
+        });
+    });
+</script>
+
+</body>
+</html>

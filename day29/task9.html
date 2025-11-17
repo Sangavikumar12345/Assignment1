@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        section {
+            opacity: 0;             /* hidden initially */
+            padding: 50px;
+            margin: 50px 0;
+            background: #f0f0f0;
+            border-radius: 10px;
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Portfolio</h1>
+
+<section class="fade-section">About Me</section>
+<section class="fade-section">Projects</section>
+<section class="fade-section">Skills</section>
+<section class="fade-section">Contact</section>
+
+<script>
+    $(document).ready(function () {
+        // Fade in sections on page load
+        $(".fade-section").each(function (i) {
+            $(this).delay(i * 300).animate({opacity: 1}, 800);
+        });
+
+        // Optional: fade in sections when scrolled into view
+        $(window).on("scroll", function () {
+            $(".fade-section").each(function () {
+                if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 50) {
+                    $(this).animate({opacity: 1}, 800);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #note {
+            display: none;
+            background: #ffd966;
+            padding: 15px;
+            width: 250px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="showNote">Show Notification</button>
+
+<div id="note">
+    This is a notification message.
+</div>
+
+<script>
+    $("#showNote").click(function () {
+        $("#note").slideDown();
+    });
+</script>
+
+</body>
+</html>
